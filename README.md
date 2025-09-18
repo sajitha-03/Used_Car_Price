@@ -70,5 +70,5 @@ Based on diffent plots, these are the findings:
 
 ## Recommendations
 
-**Recommendation is to increase the inventory of newer 4wd Japanese pickup/SUV with low miles for better sales.**
+**Recommendation is to increase the inventory of newer 4wd Japanese pickup/SUV with low miles for better sales. Limited stock of expensive cars from Mercedes-Benz/Porsche/Ferrari in good condition will boost overall car sales**
 
