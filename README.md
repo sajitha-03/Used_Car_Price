@@ -8,17 +8,17 @@ The goal of the project is to understand what factors make a car more or less ex
 
 ## Problem Statement
 
-Given a dataset of used car attributes such as year, model, manufacturer, condition, title_status and other key features, predict the price of a used car. In additon, analyze and recommend what features influence the car price.
+Given a dataset of used car attributes such as year, model, manufacturer, condition, title_status and other key features, predict the price of a used car. Addtionally, analyze and recommend what features influence the car price.
 
 ## Data Understanding
 
 Explore the dataset to find the key features and the target variable included. Try to eyeball relationship of target variable with each of the key features. Identify missing and invalid values and the outliers from the dataset. Identify the columns that can be dropped from a modeling perspective.
 
 - Find how big the dataset is
-- identify and drop duplicates
-- identify columns to be dropped - id, VIN
-- visualize the relationionship of price with other features
-- identify unique values in categorical features and drop columns with large number of unique values
+- Identify and drop duplicates
+- Identify columns to be dropped - id, VIN
+- Visualize the relationionship of price with other features
+- Identify unique values in categorical features and drop columns with large number of unique values
 - Drop outliers from price column
 - Keep recent data up to 4 decades
 
@@ -29,7 +29,7 @@ Original dataset - (426880, 18)
 - Dropped duplicates, columns not relevant to current analysis - id,vin,region,state,paint_color,size
 - Dropped model column becasue of large number of unique values
 - Kept data in the 500-150000 price range to remove outliers
-- Kept data from year 1980 onwards
+- Kept more recent data from year 1980 onwards
 - Filled null numerical features with median values
 - Filled null categorical features with unknown values
 - Applied StandardScaler to scale and PolynomialFeatures to reduce overfittng on numerical features
@@ -45,7 +45,7 @@ Key features kept for modeling used car price and analysis:
 
 ## Modeling
 
-Considered different models such as LinearRegression, Lasso, Ridge Regression. PCA was done to reduce the dimensionality from polynomialfeature and OHE for certain models. 
+Considered different models such as LinearRegression, Lasso, Ridge Regression. PCA was done for certain models to handle the dimensionality from PolynomialFeatures and OHE . 
 
 ## Findings
 
@@ -61,14 +61,16 @@ Comparing RMSE and R2 score between models, Ridge Regression without using PCA r
 
 ### Feature Importance
 
-Visualizing importance of features from Ridge regression model - year(age), manufacturer, type, drive and odometer are the important features that influence the car price.
+Visualizing importance of features from Ridge regression model - year(age), manufacturer, type, drive and odometer are the top five features that influence the car price.
 
-Based on diffent plots, these are the findings:
+<img width="881" height="550" alt="Screenshot 2025-09-18 at 6 53 58 PM" src="https://github.com/user-attachments/assets/f951de64-9885-4515-820f-6c4d160cafb0" />
+
+Visualizing correlation between price vs other features and the feature importance, these are the findings:
 
 - Price of older cars with high mileage is much depreciated
 - Pickup/SUV/coupe/convertible type vehicles have high resale value
 
 ## Recommendations
 
-**Recommendation is to increase the inventory of newer 4wd Japanese pickup/SUV with low miles for better sales. Limited stock of expensive cars from Mercedes-Benz/Porsche/Ferrari in good condition will boost overall car sales**
+**Recommendations to used car dealership are to increase the inventory of newer 4wd Japanese brand pickup/SUV with low miles for better sales. Limited stock of expensive cars from Mercedes-Benz/Porsche/Ferrari in good condition will also boost overall car sales**
 
